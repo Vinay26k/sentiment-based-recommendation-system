@@ -13,7 +13,7 @@ As a senior ML Engineer, you are asked to build a model that will improve the re
 ## Solution
 
 * [github link](https://github.com/Vinay26k/sentiment-based-recommendation-system)
-* [Heroku App](https://sntmnt-based-product-recommend.herokuapp.com/)
+* [Heroku App](https://sentrecom.herokuapp.com/)
 
 ### Built with following requirements
 
