@@ -71,7 +71,7 @@ class SentimentRecommender:
 
             # preprocess the text and predict sentiment
             X = self.vectorizer.transform(
-                filtered_data["reviews_text_cleaned"].values.astype(str)
+                filtered_data["lemmatized_reviews"].values.astype(str)
             )
             filtered_data["predicted_sentiment"] = self.model.predict(X)
             temp = filtered_data[["id", "predicted_sentiment"]]
@@ -151,7 +151,7 @@ class SentimentRecommender:
         # Map the position tag and lemmatize the word/token
         words = [
             self.lemmatizer.lemmatize(tag[0], self.get_wordnet_pos(tag[1]))
-            for idx, tag in enumerate(word_pos_tags)
+            for _, tag in enumerate(word_pos_tags)
         ]
         return " ".join(words)
 
