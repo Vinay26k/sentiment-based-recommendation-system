@@ -154,3 +154,6 @@ class SentimentRecommender:
             for idx, tag in enumerate(word_pos_tags)
         ]
         return " ".join(words)
+
+
+nltk_setup()
